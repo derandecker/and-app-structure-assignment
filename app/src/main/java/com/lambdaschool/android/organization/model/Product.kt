@@ -1,13 +1,13 @@
 package com.lambdaschool.android.organization.model
 
-class Product {
-    val productName: String = ""
-    val productDescription: String = ""
-    val productPrice: Double = 0.00
-    val productTax: Double = 0.00
-    val productDiscount: Double = 0.00
-
-}
+class Product(
+    val productName: String,
+    val productDescription: String,
+    val productPrice: Double,
+    val productDiscount: Double,
+    val productTax: Double = productPrice * .045,
+    val totalProductPrice: Double = productPrice + productTax
+)
 
 //productName - the product's name
 ////productDescription - the product's description
